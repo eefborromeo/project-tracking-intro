@@ -1,0 +1,41 @@
+// RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// VARIABLES
+// Typography
+$font-url: 'https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap';
+$font-heading: 'Barlow Condensed', sans-serif;
+$font-body: 'Barlow', sans-serif;
+
+$font-regular: 400;
+$font-bold: 700;
+$font-size: 18px;
+
+// BREAKPOINTS
+$mobile: 375px;
+$tablet: 768px;
+$s-desktop: 1024px;
+$desktop: 1440px;
+
+// COLORS
+$white: #fff;
+$black: #000;
+
+$red: hsl(0, 100%, 68%);
+$very-dark-blue: hsl(230, 29%, 20%);
+$dark-grayish-blue: hsl(230, 11%, 40%);
+$grayish-blue: hsl(231, 7%, 65%);
+$light-grayish-blue: hsl(207, 33%, 95%);
+
+//  Functional
+
+$primary-color: $red;
+$secondary-color: $grayish-blue;
+
+$text-light: $grayish-blue;
+$text-dark: $very-dark-blue;
+$text-gray: $dark-grayish-blue;

@@ -1,0 +1,134 @@
+@import url($font-url);
+
+:root {
+  font-size: $font-size;
+}
+
+body {
+  font-family: $font-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.cta,
+button {
+  font-family: $font-heading;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+}
+
+header {
+  padding: 40px 0;
+  width: 88%;
+  margin: auto;
+  @media screen and (min-width: $s-desktop) {
+    width: 84%;
+  }
+}
+
+main {
+  @media screen and (min-width: $s-desktop) {
+    margin-top: 4rem;
+  }
+}
+
+.wrapper {
+  @media screen and (min-width: $s-desktop) {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 94%;
+    margin-left: auto;
+  }
+}
+
+.container {
+  .image-container {
+    width: 100%;
+    background-image: url('../images/illustration-devices.svg');
+    background-repeat: no-repeat;
+    padding-top: 37vh;
+    background-size: 145%;
+    @media screen and (min-width: $tablet) {
+      padding-top: 70vh;
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 50%;
+      background-color: $light-grayish-blue;
+      height: 50vh;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      border-bottom-left-radius: 50px;
+      @media screen and (min-width: $s-desktop) {
+        width: 48%;
+        height: 52vh;
+      }
+    }
+  }
+  &:nth-child(2) {
+    padding: 1.5rem;
+  }
+  @media screen and (min-width: $s-desktop) {
+    flex: 1 1 50%;
+  }
+}
+
+h1 {
+  font-weight: $font-regular;
+  font-size: 0.9rem;
+  letter-spacing: 5px;
+  color: $grayish-blue;
+  span {
+    letter-spacing: normal;
+    background-color: $very-dark-blue;
+    color: $white;
+    font-weight: $font-bold;
+    padding: 3px 10px;
+    border-radius: 50px;
+    margin-right: 0.5rem;
+  }
+}
+
+h2 {
+  font-size: 2.4rem;
+  color: $very-dark-blue;
+  @media screen and (min-width: $s-desktop) {
+    font-size: 4.5rem;
+  }
+}
+
+p {
+  color: $dark-grayish-blue;
+  font-size: 1.15rem;
+  padding: 0.5rem 0;
+  @media screen and (min-width: $s-desktop) {
+    padding: 2rem 0;
+    width: 55%;
+    font-size: 1.2rem;
+  }
+}
+
+.cta {
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  color: #a0a1ac;
+  @media screen and (min-width: $s-desktop) {
+    font-size: 1.15rem;
+  }
+  span {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+    @media screen and (min-width: $s-desktop) {
+      width: 30%;
+    }
+  }
+}

@@ -1,0 +1,170 @@
+// Buttons
+button {
+  font-size: 0.9rem;
+  font-weight: $font-bold;
+  background-color: $red;
+  outline: none;
+  color: $white;
+  border: none;
+  width: 50%;
+  border-radius: 5px;
+  padding: 10px;
+  letter-spacing: 1px;
+  @media screen and (min-width: $s-desktop) {
+    width: 35%;
+    font-size: 1.3rem;
+    padding: 15px;
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($red, 10%);
+    }
+  }
+}
+// Navigation
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  .logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    img {
+      width: 25px;
+    }
+  }
+  .menu {
+    .hamburger {
+      transition: 500ms;
+      position: relative;
+      display: block;
+      width: 28px;
+      height: 2px;
+      background-color: $very-dark-blue;
+      &:before {
+        transition: 500ms;
+        content: '';
+        @extend .hamburger;
+        position: absolute;
+        top: 8px;
+      }
+      &:after {
+        transition: 500ms;
+        content: '';
+        @extend .hamburger;
+        position: absolute;
+        top: 16px;
+      }
+      @media screen and (min-width: $s-desktop) {
+        display: none;
+      }
+    }
+    ul {
+      transition: 800ms;
+      visibility: hidden;
+      opacity: 0;
+      list-style-type: none;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 200%;
+      text-align: center;
+      background-color: $white;
+      box-shadow: -1px 1px 5px lighten($black, 90%);
+      border-radius: 5px;
+      @media screen and (min-width: $s-desktop) {
+        visibility: visible;
+        opacity: 1;
+        position: static;
+        display: flex;
+        background-color: initial;
+        box-shadow: none;
+      }
+      li {
+        display: none;
+        padding: 1rem;
+        font-family: $font-heading;
+        text-transform: uppercase;
+        font-weight: $font-bold;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        &:nth-child(3) {
+          padding-bottom: 1.5rem;
+        }
+        &:last-child {
+          color: $text-light;
+          &:before {
+            content: '';
+            display: block;
+            width: 80%;
+            margin: auto;
+            height: 1px;
+            background-color: $text-light;
+            position: relative;
+            top: -1rem;
+            @media screen and (min-width: $s-desktop) {
+              content: none;
+            }
+          }
+          @media screen and (min-width: $s-desktop) {
+            padding-left: 6rem;
+          }
+        }
+        @media screen and (min-width: $s-desktop) {
+          display: block;
+          font-size: 1rem;
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .menu.open {
+    .hamburger {
+      background-color: transparent;
+      transition: 500ms;
+      &:before {
+        transition: 500ms;
+        content: '';
+        position: absolute;
+        top: 16px;
+        transform: rotate(-45deg) translate(5px, 5px);
+        transform-origin: 0 0;
+        background-color: $very-dark-blue;
+      }
+      &:after {
+        transition: 500ms;
+        content: '';
+        position: absolute;
+        top: 16px;
+        transform: rotate(45deg);
+        transform-origin: 100%;
+        background-color: $very-dark-blue;
+      }
+    }
+    ul {
+      transition: 800ms;
+      visibility: visible;
+      opacity: 1;
+      list-style-type: none;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 200%;
+      text-align: center;
+      background-color: $white;
+      box-shadow: -1px 1px 5px lighten($black, 90%);
+      border-radius: 5px;
+      li {
+        display: block;
+      }
+    }
+  }
+
+  @media screen and (min-width: $s-desktop) {
+    align-items: center;
+  }
+}

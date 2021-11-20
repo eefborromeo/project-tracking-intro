@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.cta,
+button {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+}
+
+header {
+  padding: 40px 0;
+  width: 88%;
+  margin: auto;
+}
+@media screen and (min-width: 1024px) {
+  header {
+    width: 84%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 94%;
+    margin-left: auto;
+  }
+}
+
+.container .image-container {
+  width: 100%;
+  background-image: url("../images/illustration-devices.svg");
+  background-repeat: no-repeat;
+  padding-top: 37vh;
+  background-size: 145%;
+}
+@media screen and (min-width: 768px) {
+  .container .image-container {
+    padding-top: 70vh;
+  }
+}
+.container .image-container:before {
+  content: "";
+  display: block;
+  width: 50%;
+  background-color: #eef3f6;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  border-bottom-left-radius: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .container .image-container:before {
+    width: 48%;
+    height: 52vh;
+  }
+}
+.container:nth-child(2) {
+  padding: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    flex: 1 1 50%;
+  }
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 5px;
+  color: #a0a1ac;
+}
+h1 span {
+  letter-spacing: normal;
+  background-color: #242942;
+  color: #fff;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 50px;
+  margin-right: 0.5rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  color: #242942;
+}
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 4.5rem;
+  }
+}
+
+p {
+  color: #5b5f71;
+  font-size: 1.15rem;
+  padding: 0.5rem 0;
+}
+@media screen and (min-width: 1024px) {
+  p {
+    padding: 2rem 0;
+    width: 55%;
+    font-size: 1.2rem;
+  }
+}
+
+.cta {
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  color: #a0a1ac;
+}
+@media screen and (min-width: 1024px) {
+  .cta {
+    font-size: 1.15rem;
+  }
+}
+.cta span {
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+}
+@media screen and (min-width: 1024px) {
+  .cta span {
+    width: 30%;
+  }
+}
+
+button {
+  font-size: 0.9rem;
+  font-weight: 700;
+  background-color: #ff5c5c;
+  outline: none;
+  color: #fff;
+  border: none;
+  width: 50%;
+  border-radius: 5px;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 1024px) {
+  button {
+    width: 35%;
+    font-size: 1.3rem;
+    padding: 15px;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: #ff8f8f;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+nav .logo {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+nav .logo img {
+  width: 25px;
+}
+nav .menu .hamburger, nav .menu .hamburger:after, nav .menu .hamburger:before {
+  transition: 500ms;
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: #242942;
+}
+nav .menu .hamburger:before {
+  transition: 500ms;
+  content: "";
+  position: absolute;
+  top: 8px;
+}
+nav .menu .hamburger:after {
+  transition: 500ms;
+  content: "";
+  position: absolute;
+  top: 16px;
+}
+@media screen and (min-width: 1024px) {
+  nav .menu .hamburger, nav .menu .hamburger:after, nav .menu .hamburger:before {
+    display: none;
+  }
+}
+nav .menu ul {
+  transition: 800ms;
+  visibility: hidden;
+  opacity: 0;
+  list-style-type: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 200%;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: -1px 1px 5px #e6e6e6;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1024px) {
+  nav .menu ul {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    display: flex;
+    background-color: initial;
+    box-shadow: none;
+  }
+}
+nav .menu ul li {
+  display: none;
+  padding: 1rem;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+nav .menu ul li:nth-child(3) {
+  padding-bottom: 1.5rem;
+}
+nav .menu ul li:last-child {
+  color: #a0a1ac;
+}
+nav .menu ul li:last-child:before {
+  content: "";
+  display: block;
+  width: 80%;
+  margin: auto;
+  height: 1px;
+  background-color: #a0a1ac;
+  position: relative;
+  top: -1rem;
+}
+@media screen and (min-width: 1024px) {
+  nav .menu ul li:last-child:before {
+    content: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav .menu ul li:last-child {
+    padding-left: 6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav .menu ul li {
+    display: block;
+    font-size: 1rem;
+  }
+  nav .menu ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+nav .menu.open .hamburger, nav .menu.open .hamburger:before, nav .menu.open .hamburger:after {
+  background-color: transparent;
+  transition: 500ms;
+}
+nav .menu.open .hamburger:before {
+  transition: 500ms;
+  content: "";
+  position: absolute;
+  top: 16px;
+  transform: rotate(-45deg) translate(5px, 5px);
+  transform-origin: 0 0;
+  background-color: #242942;
+}
+nav .menu.open .hamburger:after {
+  transition: 500ms;
+  content: "";
+  position: absolute;
+  top: 16px;
+  transform: rotate(45deg);
+  transform-origin: 100%;
+  background-color: #242942;
+}
+nav .menu.open ul {
+  transition: 800ms;
+  visibility: visible;
+  opacity: 1;
+  list-style-type: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 200%;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: -1px 1px 5px #e6e6e6;
+  border-radius: 5px;
+}
+nav .menu.open ul li {
+  display: block;
+}
+@media screen and (min-width: 1024px) {
+  nav {
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
